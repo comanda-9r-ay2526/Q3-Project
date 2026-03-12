@@ -28,48 +28,62 @@
         </div>
     </nav>
     
-     <div class="container">
-<H1>Fare Matrix</H1>
-<img src="yep.jpg" alt="yep.jpg">
-<H3> Pick up Locations</H3>
-<select name="Firststop" class="form-control"><br>
-    <option value="North Avenue">North Avenue</option>
-    <option value="Quezon Avenue">Quezon Avenue </option>
-    <option value="Kamuning">Kamuning</option>
-    <option value="Cubao">Cubao</option>
-    <option value="Santolan">Santolan</option>
-    <option value="Ortigas">Ortigas</option>
-    <option value="Shaw boulevard">Shaw boulevard</option>
-    <option value="Boni">Boni</option>
-    <option value="Guadalupe">Guadalupe</option>
-    <option value="Buendia">Buendia</option>
-    <option value="Ayala">Ayala</option> 
-    <option value="Magallanes">Magallanes</option>
-    <option value="Taft">Taft</option>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height:100vh;">
+<div class="p-5 rounded shadow" style="width:100%; max-width:1100px; background-color:rgba(207,211,216,0.8);">
+
+<h2>MRT Line 3 Fare Guide</h2>
+
+<label>Pick-Up Location</label>
+<select id="pickup" class="form-select mb-3">
+<option value="0">North Avenue</option>
+<option value="1">Quezon Avenue</option>
+<option value="2">Kamuning</option>
+<option value="3">Cubao</option>
+<option value="4">Santolan-Annapolis</option>
+<option value="5">Ortigas</option>
+<option value="6">Shaw Boulevard</option>
+<option value="7">Boni</option>
+<option value="8">Guadalupe</option>
+<option value="9">Buendia</option>
+<option value="10">Ayala</option>
+<option value="11">Magallanes</option>
+<option value="12">Taft Avenue</option>
 </select>
 
-<h3>Drop-off Locations</h3>
-
-
-
-<select name="Drop-off" class="form-control">
-    <option value="North Avenue">North Avenue</option>
-    <option value="Quezon Avenue">Quezon Avenue </option>
-    <option value="Kamuning">Kamuning</option>
-    <option value="Cubao">Cubao</option>
-    <option value="Santolan">Santolan</option>
-    <option value="Ortigas">Ortigas</option>
-    <option value="Shaw boulevard">Shaw boulevard</option>
-    <option value="Boni">Boni</option>
-    <option value="Guadalupe">Guadalupe</option>
-    <option value="Buendia">Buendia</option>
-    <option value="Ayala">Ayala</option> 
-    <option value="Magallanes">Magallanes</option>
-    <option value="Taft">Taft</option>
+<label>Drop Off Location</label>
+<select id="dropoff" class="form-select mb-3">
+<option value="0">North Avenue</option>
+<option value="1">Quezon Avenue</option>
+<option value="2">Kamuning</option>
+<option value="3">Cubao</option>
+<option value="4">Santolan-Annapolis</option>
+<option value="5">Ortigas</option>
+<option value="6">Shaw Boulevard</option>
+<option value="7">Boni</option>
+<option value="8">Guadalupe</option>
+<option value="9">Buendia</option>
+<option value="10">Ayala</option>
+<option value="11">Magallanes</option>
+<option value="12">Taft Avenue</option>
 </select>
-<button class="btn btn-warning">Regular Fare</button>
-<button class="btn btn-dark">Discounted Fare</button>
-  </div>
+
+<label>Passenger Type</label>
+<select id="passenger" class="form-select mb-3">
+<option value="0">Regular</option>
+<option value="0.20">Senior Citizen (20% off)</option>
+<option value="0.20">PWD (20% off)</option>
+<option value="0.20">Student (20% off)</option>
+</select>
+
+<button class="btn btn-primary" onclick="computeFare()">Compute Fare</button>
+
+<div class="fare-box">
+<h3>Fare:</h3>
+<div class="fare-amount" id="fare">PHP0.00</div>
+</div>
+
+</div>
+</div>
   
 
 
